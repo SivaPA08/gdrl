@@ -7,7 +7,15 @@ import jakarta.persistence.Entity;
 public class UrlEntity {
 
 	private String microserviceId;
+	// important cols
+	private String urlPattern;
+	private String httpMethod;
+	private String targetUrl; // address of the url
+	private boolean authRequired;
+	private String role;
+	// imp cols ends
 	private String microserviceUrl;
+
 	private String name;
 
 	public String getMicroserviceId() {
