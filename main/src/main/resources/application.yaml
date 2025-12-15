@@ -1,3 +1,13 @@
 spring:
   application:
     name: main
+
+  r2dbc:
+    url: r2dbc:mariadb://localhost:3306/gatewaydb
+    username: siva
+    password: 1234
+
+  sql:
+    init:
+      mode: never
+

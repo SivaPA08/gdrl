@@ -1,5 +1,8 @@
 package com.siva.main.jwt;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class JwtService {
 	private final String secret = "top-secret";
 	private final long ttlSeconds = 3600; // 1 hr

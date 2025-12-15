@@ -1,6 +1,8 @@
 package com.siva.main.db;
 
-// @Table(name = "url")
+import org.springframework.data.relational.core.mapping.Table;
+
+@Table(name = "url")
 public class UrlEntity {
 
 	// important cols
