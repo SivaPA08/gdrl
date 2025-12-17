@@ -16,13 +16,22 @@ public class GatewayRouter {
 		this.gatewayController = gatewayController;
 	}
 
+	// @Bean
+	// public RouterFunction<ServerResponse> routes() {
+	// return RouterFunctions.route(
+	// RequestPredicates.all(),
+	// request -> {
+	// gatewayController.handle(request.exchange()).subscribe();
+	// return ServerResponse.ok().build();
+	// });
+	// }
 	@Bean
 	public RouterFunction<ServerResponse> routes() {
 		return RouterFunctions.route(
 				RequestPredicates.all(),
-				request -> {
-					gatewayController.handle(request.exchange()).subscribe();
-					return ServerResponse.ok().build();
-				});
+				request -> gatewayController.handle(request.exchange())
+						.then(ServerResponse.ok().build())
+						.onErrorResume(e -> ServerResponse.badRequest()
+								.bodyValue("Error: " + e.getMessage())));
 	}
 }
