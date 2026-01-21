@@ -1,0 +1,176 @@
+○ mariadb.service - MariaDB 10.11 database server
+     Loaded: loaded (]8;;file://fsocity/usr/lib/systemd/system/mariadb.service\/usr/lib/systemd/system/mariadb.service]8;;\; [0;1;38:5:185mdisabled[0m; preset: [0;1;38:5:185mdisabled[0m)
+    Drop-In: /usr/lib/systemd/system/service.d
+             └─]8;;file://fsocity/usr/lib/systemd/system/service.d/10-timeout-abort.conf\10-timeout-abort.conf]8;;\
+     Active: inactive (dead)
+       Docs: ]8;;man:mariadbd(8)\man:mariadbd(8)]8;;\
+             ]8;;https://mariadb.com/kb/en/library/systemd/\https://mariadb.com/kb/en/library/systemd/]8;;\
+
+Jan 21 10:21:14 fsocity mariadb-prepare-db-dir[30766]: Database MariaDB is probably initialized in /var/lib/mysql already, nothing is done.
+Jan 21 10:21:14 fsocity mariadb-prepare-db-dir[30766]: If this is not the case, make sure the /var/lib/mysql is empty before running mariadb-prepare-db-dir.
+Jan 21 10:21:14 fsocity (mariadbd)[30802]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mmariadb.service: Referenced but unset environment variable evaluates to an empty string: MYSQLD_OPTS, _WSREP_NEW_CLUSTER[0m
+Jan 21 10:21:15 fsocity systemd-coredump[30825]: ]8;;man:core(5)\[🡕]]8;;\ [0;1;31m[0;1;39m[0;1;31mProcess 30802 (mariadbd) of user 970 dumped core.[0m
+                                                 [0;1;31m[0m
+                                                 [0;1;31mModule /usr/libexec/mariadbd from rpm MariaDB-10.11.15-1.fc42.x86_64[0m
+                                                 [0;1;31mModule libsnappy.so.1 from rpm snappy-1.2.1-4.fc42.x86_64[0m
+                                                 [0;1;31mModule provider_snappy.so from rpm MariaDB-10.11.15-1.fc42.x86_64[0m
+                                                 [0;1;31mModule provider_lzo.so from rpm MariaDB-10.11.15-1.fc42.x86_64[0m
+                                                 [0;1;31mModule liblzma.so.5 from rpm xz-5.8.1-4.fc42.x86_64[0m
+                                                 [0;1;31mModule provider_lzma.so from rpm MariaDB-10.11.15-1.fc42.x86_64[0m
+                                                 [0;1;31mModule liblz4.so.1 from rpm lz4-1.10.0-2.fc42.x86_64[0m
+                                                 [0;1;31mModule provider_lz4.so from rpm MariaDB-10.11.15-1.fc42.x86_64[0m
+                                                 [0;1;31mModule libbz2.so.1 from rpm bzip2-1.0.8-20.fc42.x86_64[0m
+                                                 [0;1;31mModule provider_bzip2.so from rpm MariaDB-10.11.15-1.fc42.x86_64[0m
+                                                 [0;1;31mModule libcap.so.2 from rpm libcap-2.73-2.fc42.x86_64[0m
+                                                 [0;1;31mModule libcrypto.so.3 from rpm openssl-3.2.6-2.fc42.x86_64[0m
+                                                 [0;1;31mModule libssl.so.3 from rpm openssl-3.2.6-2.fc42.x86_64[0m
+                                                 [0;1;31mModule libz.so.1 from rpm zlib-ng-2.2.5-2.fc42.x86_64[0m
+                                                 [0;1;31mModule libsystemd.so.0 from rpm systemd-257.10-1.fc42.x86_64[0m
+                                                 [0;1;31mModule libaio.so.1 from rpm libaio-0.3.111-21.fc42.x86_64[0m
+                                                 [0;1;31mModule libcrypt.so.2 from rpm libxcrypt-4.5.2-1.fc42.x86_64[0m
+                                                 [0;1;31mModule libpcre2-8.so.0 from rpm pcre2-10.46-1.fc42.x86_64[0m
+                                                 [0;1;31mStack trace of thread 30816:[0m
+                                                 [0;1;31m#0  0x00007f9051610735 abort (libc.so.6 + 0x1735)[0m
+                                                 [0;1;31m#1  0x00007f90518091b4 _ZN9__gnu_cxx27__verbose_terminate_handlerEv.cold (libstdc++.so.6 + 0x91b4)[0m
+                                                 [0;1;31m#2  0x00007f905181eb9c _ZN10__cxxabiv111__terminateEPFvvE (libstdc++.so.6 + 0x1eb9c)[0m
+                                                 [0;1;31m#3  0x00007f9051808d3a _ZSt9terminatev (libstdc++.so.6 + 0x8d3a)[0m
+                                                 [0;1;31m#4  0x00005579d9e1361b _ZN12mem_pressureD2Ev.cold (/usr/libexec/mariadbd + 0x7d61b)[0m
+                                                 [0;1;31m#5  0x00007f905162b7e1 __run_exit_handlers (libc.so.6 + 0x1c7e1)[0m
+                                                 [0;1;31m#6  0x00007f905162b8be exit (libc.so.6 + 0x1c8be)[0m
+                                                 [0;1;31m#7  0x00005579d9e85222 signal_hand (/usr/libexec/mariadbd + 0xef222)[0m
+                                                 [0;1;31m#8  0x00005579da495a51 pfs_spawn_thread (/usr/libexec/mariadbd + 0x6ffa51)[0m
+                                                 [0;1;31m#9  0x00007f9051680f14 start_thread (libc.so.6 + 0x71f14)[0m
+                                                 [0;1;31m#10 0x00007f90517042ec __clone3 (libc.so.6 + 0xf52ec)[0m
+                                                 [0;1;31m[0m
+                                                 [0;1;31mStack trace of thread 30814:[0m
+                                                 [0;1;31m#0  0x00007f9051689422 __syscall_cancel_arch (libc.so.6 + 0x7a422)[0m
+                                                 [0;1;31m#1  0x00007f905167d71c __internal_syscall_cancel (libc.so.6 + 0x6e71c)[0m
+                                                 [0;1;31m#2  0x00007f905167dd8c __futex_abstimed_wait_common (libc.so.6 + 0x6ed8c)[0m
+                                                 [0;1;31m#3  0x00007f9051680892 pthread_cond_clockwait@GLIBC_2.30 (libc.so.6 + 0x71892)[0m
+                                                 [0;1;31m#4  0x00005579da6afc41 _ZN5tpool19thread_pool_generic14wait_for_tasksERSt11unique_lockISt5mutexEPNS_11worker_dataE (/usr/libexec/mariadbd + 0x919c41)[0m
+                                                 [0;1;31m#5  0x00005579da6afe91 _ZN5tpool19thread_pool_generic8get_taskEPNS_11worker_dataEPPNS_4taskE (/usr/libexec/mariadbd + 0x919e91)[0m
+                                                 [0;1;31m#6  0x00005579da6b219f _ZN5tpool19thread_pool_generic11worker_mainEPNS_11worker_dataE (/usr/libexec/mariadbd + 0x91c19f)[0m
+                                                 [0;1;31m#7  0x00007f905184e3e4 execute_native_thread_routine (libstdc++.so.6 + 0x4e3e4)[0m
+                                                 [0;1;31m#8  0x00007f9051680f14 start_thread (libc.so.6 + 0x71f14)[0m
+                                                 [0;1;31m#9  0x00007f90517042ec __clone3 (libc.so.6 + 0xf52ec)[0m
+                                                 [0;1;31m[0m
+                                                 [0;1;31mStack trace of thread 30802:[0m
+                                                 [0;1;31m#0  0x00007f9051689422 __syscall_cancel_arch (libc.so.6 + 0x7a422)[0m
+                                                 [0;1;31m#1  0x00007f905167d71c __internal_syscall_cancel (libc.so.6 + 0x6e71c)[0m
+                                                 [0;1;31m#2  0x00007f905167dd8c __futex_abstimed_wait_common (libc.so.6 + 0x6ed8c)[0m
+                                                 [0;1;31m#3  0x00007f905168045e pthread_cond_wait@@GLIBC_2.3.2 (libc.so.6 + 0x7145e)[0m
+                                                 [0;1;31m#4  0x00005579d9e93373 _Z11mysqld_mainiPPc (/usr/libexec/mariadbd + 0xfd373)[0m
+                                                 [0;1;31m#5  0x00007f9051612575 __libc_start_call_main (libc.so.6 + 0x3575)[0m
+                                                 [0;1;31m#6  0x00007f9051612628 __libc_start_main@@GLIBC_2.34 (libc.so.6 + 0x3628)[0m
+                                                 [0;1;31m#7  0x00005579d9e707f5 _start (/usr/libexec/mariadbd + 0xda7f5)[0m
+                                                 [0;1;31m[0m
+                                                 [0;1;31mStack trace of thread 30804:[0m
+                                                 [0;1;31m#0  0x00007f9051689422 __syscall_cancel_arch (libc.so.6 + 0x7a422)[0m
+                                                 [0;1;31m#1  0x00007f905167d71c __internal_syscall_cancel (libc.so.6 + 0x6e71c)[0m
+                                                 [0;1;31m#2  0x00007f905167dd8c __futex_abstimed_wait_common (libc.so.6 + 0x6ed8c)[0m
+                                                 [0;1;31m#3  0x00007f9051680668 pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6 + 0x71668)[0m
+                                                 [0;1;31m#4  0x00005579da70a37d timer_handler (/usr/libexec/mariadbd + 0x97437d)[0m
+                                                 [0;1;31m#5  0x00007f9051680f14 start_thread (libc.so.6 + 0x71f14)[0m
+                                                 [0;1;31m#6  0x00007f90517042ec __clone3 (libc.so.6 + 0xf52ec)[0m
+                                                 [0;1;31m[0m
+                                                 [0;1;31mStack trace of thread 30809:[0m
+                                                 [0;1;31m#0  0x00007f9051689422 __syscall_cancel_arch (libc.so.6 + 0x7a422)[0m
+                                                 [0;1;31m#1  0x00007f905167d71c __internal_syscall_cancel (libc.so.6 + 0x6e71c)[0m
+                                                 [0;1;31m#2  0x00007f905167dd8c __futex_abstimed_wait_common (libc.so.6 + 0x6ed8c)[0m
+                                                 [0;1;31m#3  0x00007f9051680668 pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6 + 0x71668)[0m
+                                                 [0;1;31m#4  0x00005579da65446f _ZL22buf_flush_page_cleanerv.lto_priv.0 (/usr/libexec/mariadbd + 0x8be46f)[0m
+                                                 [0;1;31m#5  0x00007f905184e3e4 execute_native_thread_routine (libstdc++.so.6 + 0x4e3e4)[0m
+                                                 [0;1;31m#6  0x00007f9051680f14 start_thread (libc.so.6 + 0x71f14)[0m
+                                                 [0;1;31m#7  0x00007f90517042ec __clone3 (libc.so.6 + 0xf52ec)[0m
+                                                 [0;1;31m[0m
+                                                 [0;1;31mStack trace of thread 30806:[0m
+                                                 [0;1;31m#0  0x00007f9051689422 __syscall_cancel_arch (libc.so.6 + 0x7a422)[0m
+                                                 [0;1;31m#1  0x00007f905167d71c __internal_syscall_cancel (libc.so.6 + 0x6e71c)[0m
+                                                 [0;1;31m#2  0x00007f905167dd8c __futex_abstimed_wait_common (libc.so.6 + 0x6ed8c)[0m
+                                                 [0;1;31m#3  0x00007f9051680668 pthread_cond_timedwait@@GLIBC_2.3.2 (libc.so.6 + 0x71668)[0m
+                                                 [0;1;31m#4  0x00005579da43696e my_service_thread_sleep (/usr/libexec/mariadbd + 0x6a096e)[0m
+                                                 [0;1;31m#5  0x00005579da43d781 ma_checkpoint_background (/usr/libexec/mariadbd + 0x6a7781)[0m
+                                                 [0;1;31m#6  0x00007f9051680f14 start_thread (libc.so.6 + 0x71f14)[0m
+                                                 [0;1;31m#7  0x00007f90517042ec __clone3 (libc.so.6 + 0xf52ec)[0m
+                                                 [0;1;31m[0m
+                                                 [0;1;31mStack trace of thread 30815:[0m
+                                                 [0;1;31m#0  0x00007f9051689422 __syscall_cancel_arch (libc.so.6 + 0x7a422)[0m
+                                                 [0;1;31m#1  0x00007f905167d71c __internal_syscall_cancel (libc.so.6 + 0x6e71c)[0m
+                                                 [0;1;31m#2  0x00007f905167dd8c __futex_abstimed_wait_common (libc.so.6 + 0x6ed8c)[0m
+                                                 [0;1;31m#3  0x00007f9051680892 pthread_cond_clockwait@GLIBC_2.30 (libc.so.6 + 0x71892)[0m
+                                                 [0;1;31m#4  0x00005579da6afc41 _ZN5tpool19thread_pool_generic14wait_for_tasksERSt11unique_lockISt5mutexEPNS_11worker_dataE (/usr/libexec/mariadbd + 0x919c41)[0m
+                                                 [0;1;31m#5  0x00005579da6afe91 _ZN5tpool19thread_pool_generic8get_taskEPNS_11worker_dataEPPNS_4taskE (/usr/libexec/mariadbd + 0x919e91)[0m
+                                                 [0;1;31m#6  0x00005579da6b219f _ZN5tpool19thread_pool_generic11worker_mainEPNS_11worker_dataE (/usr/libexec/mariadbd + 0x91c19f)[0m
+                                                 [0;1;31m#7  0x00007f905184e3e4 execute_native_thread_routine (libstdc++.so.6 + 0x4e3e4)[0m
+                                                 [0;1;31m#8  0x00007f9051680f14 start_thread (libc.so.6 + 0x71f14)[0m
+                                                 [0;1;31m#9  0x00007f90517042ec __clone3 (libc.so.6 + 0xf52ec)[0m
+                                                 [0;1;31m[0m
+                                                 [0;1;31mStack trace of thread 30811:[0m
+                                                 [0;1;31m#0  0x00007f9051689422 __syscall_cancel_arch (libc.so.6 + 0x7a422)[0m
+                                                 [0;1;31m#1  0x00007f905167d71c __internal_syscall_cancel (libc.so.6 + 0x6e71c)[0m
+                                                 [0;1;31m#2  0x00007f905167dd8c __futex_abstimed_wait_common (libc.so.6 + 0x6ed8c)[0m
+                                                 [0;1;31m#3  0x00007f9051680892 pthread_cond_clockwait@GLIBC_2.30 (libc.so.6 + 0x71892)[0m
+                                                 [0;1;31m#4  0x00005579da6afc41 _ZN5tpool19thread_pool_generic14wait_for_tasksERSt11unique_lockISt5mutexEPNS_11worker_dataE (/usr/libexec/mariadbd + 0x919c41)[0m
+                                                 [0;1;31m#5  0x00005579da6afe91 _ZN5tpool19thread_pool_generic8get_taskEPNS_11worker_dataEPPNS_4taskE (/usr/libexec/mariadbd + 0x919e91)[0m
+                                                 [0;1;31m#6  0x00005579da6b219f _ZN5tpool19thread_pool_generic11worker_mainEPNS_11worker_dataE (/usr/libexec/mariadbd + 0x91c19f)[0m
+                                                 [0;1;31m#7  0x00007f905184e3e4 execute_native_thread_routine (libstdc++.so.6 + 0x4e3e4)[0m
+                                                 [0;1;31m#8  0x00007f9051680f14 start_thread (libc.so.6 + 0x71f14)[0m
+                                                 [0;1;31m#9  0x00007f90517042ec __clone3 (libc.so.6 + 0xf52ec)[0m
+                                                 [0;1;31m[0m
+                                                 [0;1;31mStack trace of thread 30810:[0m
+                                                 [0;1;31m#0  0x00007f9051689422 __syscall_cancel_arch (libc.so.6 + 0x7a422)[0m
+                                                 [0;1;31m#1  0x00007f905167d71c __internal_syscall_cancel (libc.so.6 + 0x6e71c)[0m
+                                                 [0;1;31m#2  0x00007f905167dd8c __futex_abstimed_wait_common (libc.so.6 + 0x6ed8c)[0m
+                                                 [0;1;31m#3  0x00007f9051680892 pthread_cond_clockwait@GLIBC_2.30 (libc.so.6 + 0x71892)[0m
+                                                 [0;1;31m#4  0x00005579da6afc41 _ZN5tpool19thread_pool_generic14wait_for_tasksERSt11unique_lockISt5mutexEPNS_11worker_dataE (/usr/libexec/mariadbd + 0x919c41)[0m
+                                                 [0;1;31m#5  0x00005579da6afe91 _ZN5tpool19thread_pool_generic8get_taskEPNS_11worker_dataEPPNS_4taskE (/usr/libexec/mariadbd + 0x919e91)[0m
+                                                 [0;1;31m#6  0x00005579da6b219f _ZN5tpool19thread_pool_generic11worker_mainEPNS_11worker_dataE (/usr/libexec/mariadbd + 0x91c19f)[0m
+                                                 [0;1;31m#7  0x00007f905184e3e4 execute_native_thread_routine (libstdc++.so.6 + 0x4e3e4)[0m
+                                                 [0;1;31m#8  0x00007f9051680f14 start_thread (libc.so.6 + 0x71f14)[0m
+                                                 [0;1;31m#9  0x00007f90517042ec __clone3 (libc.so.6 + 0xf52ec)[0m
+                                                 [0;1;31m[0m
+                                                 [0;1;31mStack trace of thread 30813:[0m
+                                                 [0;1;31m#0  0x00007f9051689422 __syscall_cancel_arch (libc.so.6 + 0x7a422)[0m
+                                                 [0;1;31m#1  0x00007f905167d71c __internal_syscall_cancel (libc.so.6 + 0x6e71c)[0m
+                                                 [0;1;31m#2  0x00007f905167dd8c __futex_abstimed_wait_common (libc.so.6 + 0x6ed8c)[0m
+                                                 [0;1;31m#3  0x00007f905168045e pthread_cond_wait@@GLIBC_2.3.2 (libc.so.6 + 0x7145e)[0m
+                                                 [0;1;31m#4  0x00005579d9fbbc80 handle_manager (/usr/libexec/mariadbd + 0x225c80)[0m
+                                                 [0;1;31m#5  0x00005579da495a51 pfs_spawn_thread (/usr/libexec/mariadbd + 0x6ffa51)[0m
+                                                 [0;1;31m#6  0x00007f9051680f14 start_thread (libc.so.6 + 0x71f14)[0m
+                                                 [0;1;31m#7  0x00007f90517042ec __clone3 (libc.so.6 + 0xf52ec)[0m
+                                                 [0;1;31m[0m
+                                                 [0;1;31mStack trace of thread 30812:[0m
+                                                 [0;1;31m#0  0x00007f9051689422 __syscall_cancel_arch (libc.so.6 + 0x7a422)[0m
+                                                 [0;1;31m#1  0x00007f905167d71c __internal_syscall_cancel (libc.so.6 + 0x6e71c)[0m
+                                                 [0;1;31m#2  0x00007f905167dd8c __futex_abstimed_wait_common (libc.so.6 + 0x6ed8c)[0m
+                                                 [0;1;31m#3  0x00007f9051680892 pthread_cond_clockwait@GLIBC_2.30 (libc.so.6 + 0x71892)[0m
+                                                 [0;1;31m#4  0x00005579da6afc41 _ZN5tpool19thread_pool_generic14wait_for_tasksERSt11unique_lockISt5mutexEPNS_11worker_dataE (/usr/libexec/mariadbd + 0x919c41)[0m
+                                                 [0;1;31m#5  0x00005579da6afe91 _ZN5tpool19thread_pool_generic8get_taskEPNS_11worker_dataEPPNS_4taskE (/usr/libexec/mariadbd + 0x919e91)[0m
+                                                 [0;1;31m#6  0x00005579da6b219f _ZN5tpool19thread_pool_generic11worker_mainEPNS_11worker_dataE (/usr/libexec/mariadbd + 0x91c19f)[0m
+                                                 [0;1;31m#7  0x00007f905184e3e4 execute_native_thread_routine (libstdc++.so.6 + 0x4e3e4)[0m
+                                                 [0;1;31m#8  0x00007f9051680f14 start_thread (libc.so.6 + 0x71f14)[0m
+                                                 [0;1;31m#9  0x00007f90517042ec __clone3 (libc.so.6 + 0xf52ec)[0m
+                                                 [0;1;31m[0m
+                                                 [0;1;31mStack trace of thread 30807:[0m
+                                                 [0;1;31m#0  0x00007f905170208d syscall (libc.so.6 + 0xf308d)[0m
+                                                 [0;1;31m#1  0x00005579da6af867 _ZN12_GLOBAL__N_110aio_libaio23getevent_thread_routineEPS0_ (/usr/libexec/mariadbd + 0x919867)[0m
+                                                 [0;1;31m#2  0x00007f905184e3e4 execute_native_thread_routine (libstdc++.so.6 + 0x4e3e4)[0m
+                                                 [0;1;31m#3  0x00007f9051680f14 start_thread (libc.so.6 + 0x71f14)[0m
+                                                 [0;1;31m#4  0x00007f90517042ec __clone3 (libc.so.6 + 0xf52ec)[0m
+                                                 [0;1;31m[0m
+                                                 [0;1;31mStack trace of thread 30808:[0m
+                                                 [0;1;31m#0  0x00007f9051689422 __syscall_cancel_arch (libc.so.6 + 0x7a422)[0m
+                                                 [0;1;31m#1  0x00007f905167d71c __internal_syscall_cancel (libc.so.6 + 0x6e71c)[0m
+                                                 [0;1;31m#2  0x00007f905167d764 __syscall_cancel (libc.so.6 + 0x6e764)[0m
+                                                 [0;1;31m#3  0x00007f90516f725e __poll (libc.so.6 + 0xe825e)[0m
+                                                 [0;1;31m#4  0x00005579da64548c _ZN12mem_pressure16pressure_routineEPS_ (/usr/libexec/mariadbd + 0x8af48c)[0m
+                                                 [0;1;31m#5  0x00007f905184e3e4 execute_native_thread_routine (libstdc++.so.6 + 0x4e3e4)[0m
+                                                 [0;1;31m#6  0x00007f9051680f14 start_thread (libc.so.6 + 0x71f14)[0m
+                                                 [0;1;31m#7  0x00007f90517042ec __clone3 (libc.so.6 + 0xf52ec)[0m
+                                                 [0;1;31mELF object binary architecture: AMD x86-64[0m
+Jan 21 10:21:15 fsocity systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mmariadb.service: Main process exited, code=dumped, status=6/ABRT[0m
+Jan 21 10:21:15 fsocity systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mmariadb.service: Failed with result 'core-dump'.[0m
+Jan 21 10:21:15 fsocity systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start mariadb.service - MariaDB 10.11 database server.[0m
+Jan 21 10:21:15 fsocity systemd[1]: mariadb.service: Consumed 678ms CPU time, 80.9M memory peak.
+Jan 21 10:21:18 fsocity systemd[1]: Stopped mariadb.service - MariaDB 10.11 database server.
+Jan 21 10:21:18 fsocity systemd[1]: mariadb.service: Consumed 678ms CPU time, 80.9M memory peak.

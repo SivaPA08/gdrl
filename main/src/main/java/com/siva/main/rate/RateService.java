@@ -11,9 +11,7 @@ public class RateService {
 
 	public boolean allowToken(String clientId) {
 		TB bucket = bucketsPerUser.computeIfAbsent(clientId, id -> new TB(100, 10, 1));
-
 		return bucket.allowToken(); // allowToken feature from TB.java
-
 	}
 
 }

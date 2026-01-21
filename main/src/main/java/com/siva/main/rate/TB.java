@@ -32,7 +32,8 @@ public final class TB {
 
 	private void refill() {
 		double current = now();
-		double elapsed = lastTimestamp - current;
+		// double elapsed = lastTimestamp - current;
+		double elapsed = current - lastTimestamp;
 		if (elapsed > 0) {
 			tokens = Math.min(CAPACITY, tokens + elapsed * RATE);
 			lastTimestamp = current;

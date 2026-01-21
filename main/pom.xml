@@ -126,9 +126,14 @@ Retrieved 2025-12-06, License - CC BY-SA 4.0
   <artifactId>spring-boot-starter-data-r2dbc</artifactId>
 </dependency>
 
+<!-- <dependency> -->
+<!--   <groupId>org.mariadb</groupId> -->
+<!--   <artifactId>r2dbc-mariadb</artifactId> -->
+<!-- </dependency> -->
 <dependency>
-  <groupId>org.mariadb</groupId>
-  <artifactId>r2dbc-mariadb</artifactId>
+  <groupId>org.postgresql</groupId>
+  <artifactId>r2dbc-postgresql</artifactId>
+  <version>1.1.1.RELEASE</version>
 </dependency>
 
 
