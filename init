@@ -1,0 +1,3 @@
+mvn -pl main spring-boot:run
+
+ui at localhost://admin/index.html
