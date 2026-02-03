@@ -39,7 +39,7 @@ public class APIService {
 	}
 
 	@DeleteMapping("routes/delete/{id}")
-	public Mono<Void> dateUrRoute(@PathVariable Integer id) {
+	public Mono<Void> dateUrRoute(@PathVariable("id") Integer id) {
 		return dbService.deleteRoute(id);
 	}
 

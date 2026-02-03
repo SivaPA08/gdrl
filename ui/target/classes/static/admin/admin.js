@@ -1,3 +1,4 @@
+
 async function loadRoutes() {
 	const res = await fetch("/admin/display");
 	if (!res.ok) return;
