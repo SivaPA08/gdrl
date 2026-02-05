@@ -1,36 +1,40 @@
 package com.siva.lb.server;
 
-public class ServerUtil {
-	private String serverAddress;
-	private Integer currLoad;
+import java.util.concurrent.atomic.AtomicInteger;
 
-	public ServerUtil(String serverAddress, Integer currLoad) {
+public class ServerUtil {
+	private final String serverAddress;
+	// private Integer currLoad;
+	private final AtomicInteger currLoad;
+
+	public ServerUtil(String serverAddress) {
 		this.serverAddress = serverAddress;
-		this.currLoad = currLoad;
+		this.currLoad = new AtomicInteger(0);
 	}
 
 	public String getServerAddress() {
 		return serverAddress;
 	}
 
-	public void setServerAddress(String serverAddress) {
-		this.serverAddress = serverAddress;
+	// public void setServerAddress(String serverAddress) {
+	// 	this.serverAddress = serverAddress;
+	// }
+
+	public int getCurrLoad() {
+		return currLoad.get();
 	}
 
-	public Integer getCurrLoad() {
-		return currLoad;
-	}
-
-	public void setCurrLoad(Integer currLoad) {
-		this.currLoad = currLoad;
-	}
+	//For AtomicInteger we dont need set sutffs
+	// public void setCurrLoad(Integer currLoad) {
+	// 	this.currLoad = currLoad ;
+	// }
 
 	public void increaseLoad() {
-		this.currLoad++;
+		this.currLoad.incrementAndGet();
 	}
 
 	public void decreaseLoad() {
-		this.currLoad--;
+		this.currLoad.decrementAndGet();
 	}
 
 }
